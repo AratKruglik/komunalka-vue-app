@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.pnp.loader.mjs
+.pnp.cjs.ssh/
+.setup-1password-ssh.sh
