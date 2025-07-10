@@ -1,7 +1,9 @@
 <script setup>
-import FullLogo from '../UI/logo/FullLogo.vue'
-import PrimaryButton from "../UI/buttons/PrimaryButton.vue";
-import Checkbox from "../UI/forms/Checkbox.vue";
+import FullLogo from '../../UI/logo/FullLogo.vue'
+import PrimaryButton from '../../UI/buttons/PrimaryButton.vue'
+import Checkbox from '../../UI/forms/Checkbox.vue'
+import { CheckIcon } from '@heroicons/vue/24/solid'
+
 </script>
 
 <template>
@@ -12,6 +14,11 @@ import Checkbox from "../UI/forms/Checkbox.vue";
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
       <div class="bg-white px-6 py-12 shadow-sm sm:rounded-lg sm:px-12">
+        <div class="mb-8">
+          <p class="text-lg text-center mb-1">Відновлення паролю</p>
+          <p class="text-sm text-center text-gray-400">Відновіть доступ до вашого облікового запису</p>
+        </div>
+
         <form class="space-y-6" action="#" method="POST">
           <div>
             <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
@@ -21,25 +28,7 @@ import Checkbox from "../UI/forms/Checkbox.vue";
             </div>
           </div>
 
-          <div>
-            <label for="password" class="block text-sm/6 font-medium text-gray-900">Пароль</label>
-            <div class="mt-2">
-              <input type="password" name="password" id="password" autocomplete="current-password" required=""
-                     class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6"/>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between">
-            <div class="flex gap-3">
-              <Checkbox name="remember-me" id="remember-me" value="Запамʼятати"/>
-            </div>
-
-            <div class="text-sm/6">
-              <a href="#" class="font-semibold text-gray-600 hover:text-gray-500">Забули пароль?</a>
-            </div>
-          </div>
-
-          <PrimaryButton type="submit">Увійти</PrimaryButton>
+          <PrimaryButton type="submit">Надіслати код -></PrimaryButton>
         </form>
 
         <div>
@@ -48,7 +37,7 @@ import Checkbox from "../UI/forms/Checkbox.vue";
               <div class="w-full border-t border-gray-200"/>
             </div>
             <div class="relative flex justify-center text-sm/6 font-medium">
-              <span class="bg-white px-6 text-gray-900">Або увійти за допомогою</span>
+              <span class="bg-white px-6 text-gray-900">Або увійдіть за допомогою</span>
             </div>
           </div>
 
