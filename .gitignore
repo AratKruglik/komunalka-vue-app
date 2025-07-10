@@ -23,6 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
+# Yarn PnP files
+.pnp.cjs
 .pnp.loader.mjs
-.pnp.cjs.ssh/
-.setup-1password-ssh.sh
+
+# Yarn cache and unplugged packages
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Virtual packages
+.yarn/__virtual__/
+
