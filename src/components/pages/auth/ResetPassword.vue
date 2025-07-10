@@ -13,7 +13,7 @@ import { CheckIcon } from '@heroicons/vue/24/solid'
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-      <div class="bg-white px-6 py-12 shadow-sm sm:rounded-lg sm:px-12">
+      <div class="bg-white px-6 shadow-sm sm:rounded-lg sm:px-12">
         <div class="mb-8">
           <p class="text-lg text-center mb-1">Відновлення паролю</p>
           <p class="text-sm text-center text-gray-400">Відновіть доступ до вашого облікового запису</p>
@@ -23,7 +23,7 @@ import { CheckIcon } from '@heroicons/vue/24/solid'
           <div>
             <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
             <div class="mt-2">
-              <input type="email" name="email" id="email" autocomplete="email" required=""
+              <input type="email" name="email" id="email" autocomplete="email" required="" placeholder="your.email@example.com"
                      class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6"/>
             </div>
           </div>
@@ -72,6 +72,10 @@ import { CheckIcon } from '@heroicons/vue/24/solid'
             </a>
           </div>
         </div>
+        <RouterLink to="/login"
+                    class="flex w-[calc(100%+3rem)] -mx-6 sm:w-[calc(100%+6rem)] sm:-mx-12 items-center justify-center bg-gray-100 p-4 mt-20 text-gray-700">
+          <- Повернутись до входу
+        </RouterLink>
       </div>
     </div>
   </main>
