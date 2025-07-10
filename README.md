@@ -29,6 +29,9 @@ cd komunalka-vue-app
 # Install dependencies
 yarn install
 
+# Set up environment variables (optional)
+cp env.example .env
+
 # Start development server
 yarn dev
 ```
@@ -70,7 +73,9 @@ src/
 │   │   ├── buttons/  # Button components
 │   │   ├── forms/    # Form components (Checkbox, etc.)
 │   │   └── logo/     # Logo components
-│   └── pages/        # Page components
+│   ├── layouts/      # Layout components (MainLayout, etc.)
+│   ├── navigation/   # Navigation components (MainNavbar, MainSidebar)
+│   └── pages/        # Page components (HomePage, LoginPage)
 ├── router/           # Vue Router configuration
 ├── assets/           # Static assets
 ├── App.vue          # Root component
@@ -101,10 +106,26 @@ Test files should be placed alongside components with `.test.js` extension.
 - Follow Vue.js best practices and conventions
 
 ### Adding New Components
-1. Create components in appropriate directories under `src/components/`
+1. Create components in appropriate directories under `src/components/`:
+   - `UI/` - Reusable UI components (buttons, forms, etc.)
+   - `layouts/` - Layout components that wrap page content
+   - `navigation/` - Navigation-related components (navbars, sidebars, etc.)
+   - `pages/` - Full page components
 2. Use TypeScript-style prop definitions with validation
 3. Add corresponding test files with `.test.js` extension
 4. Import and use in parent components or pages
+
+### Environment Configuration
+
+The project supports environment variables for configuration:
+
+```bash
+# Copy the example environment file
+cp env.example .env
+```
+
+Available environment variables:
+- `VUE_APP_VERSION` - Application version (default: "v1.0.0")
 
 ### Routing
 Routes are defined in `src/router/router.js`. To add new routes:

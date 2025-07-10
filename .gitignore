@@ -37,4 +37,5 @@ dist-ssr
 .yarn/__virtual__/
 
 .DS_Store
+.env
 
