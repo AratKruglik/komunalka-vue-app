@@ -45,13 +45,6 @@ const version = 'v1.0.0'
             </ul>
           </li>
 
-          <li class="mt-auto sticky bottom-0">
-            <a href="#"
-               class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 hover:bg-gray-50 hover:text-primary-600">
-              <Cog6ToothIcon class="size-6 shrink-0 text-gray-400 group-hover:text-primary-600" aria-hidden="true"/>
-              Settings
-            </a>
-          </li>
           <li class="mt-auto">
             <p class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 text-gray-700">
               Build {{ process.env.VUE_APP_VERSION || version }}
