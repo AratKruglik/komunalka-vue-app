@@ -26,6 +26,17 @@ yarn preview
 - **package.json**: Uses ES modules (`"type": "module"`)
 - **src/main.js**: Application entry point with Vue Router integration
 
+### Environment Configuration
+The project supports environment variables for configuration:
+
+```bash
+# Copy the example environment file
+cp env.example .env
+```
+
+Available environment variables:
+- `VUE_APP_VERSION` - Application version (default: "v1.0.0")
+
 ## Testing Information
 
 ### Test Framework Setup
@@ -67,7 +78,7 @@ describe('ComponentName', () => {
     const wrapper = mount(ComponentName, {
       props: { /* test props */ }
     })
-    
+
     expect(wrapper.find('selector').exists()).toBe(true)
     expect(wrapper.text()).toContain('expected text')
   })
@@ -84,7 +95,9 @@ src/
 │   │   ├── buttons/  # Button components
 │   │   ├── forms/    # Form components (Checkbox, etc.)
 │   │   └── logo/     # Logo components
-│   └── pages/        # Page components (LoginPage, etc.)
+│   ├── layouts/      # Layout components (MainLayout, etc.)
+│   ├── navigation/   # Navigation components (MainNavbar, MainSidebar)
+│   └── pages/        # Page components (HomePage, LoginPage)
 ├── router/           # Vue Router configuration
 ├── assets/           # Static assets
 ├── App.vue          # Root component
@@ -102,8 +115,11 @@ src/
 
 ### Component Guidelines
 - Use `<script setup>` syntax for new components
-- Organize UI components by category (buttons, forms, etc.)
-- Place page components in `components/pages/`
+- Organize components in appropriate directories:
+  - `UI/` - Reusable UI components (buttons, forms, etc.)
+  - `layouts/` - Layout components that wrap page content
+  - `navigation/` - Navigation-related components (navbars, sidebars, etc.)
+  - `pages/` - Full page components
 - Use Tailwind CSS classes for styling
 - Leverage Headless UI for complex interactive components
 
