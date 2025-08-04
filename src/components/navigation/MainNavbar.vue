@@ -30,11 +30,10 @@ const userNavigation = [
 
 const navigation = [
   {name: 'Головна', href: '/', icon: HomeIcon, current: false},
-  {name: 'Панель управління', href: '/dashboard', icon: HomeIcon, current: true},
   {name: 'Мешканці', href: '/residents', icon: UsersIcon, current: false},
   {name: 'Комунальні послуги', href: '/utilities', icon: BoltIcon, current: false},
   {name: 'Заявки на ремонт', href: '/maintenance', icon: WrenchScrewdriverIcon, current: false},
-  {name: 'Налаштування', href: '#', icon: Cog6ToothIcon, current: false},
+  {name: 'Налаштування', href: '/settings', icon: Cog6ToothIcon, current: false},
 ]
 
 const sidebarOpen = ref(false)
