@@ -13,28 +13,28 @@ import {
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon, ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  BoltIcon,
+  Cog6ToothIcon,
   HomeIcon,
-  UsersIcon
+  UsersIcon,
+  WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
 import {ref} from "vue";
 import {process} from "std-env";
 import FullLogo from "../UI/logo/FullLogo.vue";
 
 const userNavigation = [
-  {name: 'Your profile', href: '#'},
-  {name: 'Sign out', href: '#'},
+  {name: 'Ваш профіль', href: '#'},
+  {name: 'Вийти', href: '/login'},
 ]
 
 const navigation = [
-  {name: 'Dashboard', href: '#', icon: HomeIcon, current: true},
-  {name: 'Team', href: '#', icon: UsersIcon, current: false},
-  {name: 'Projects', href: '#', icon: FolderIcon, current: false},
-  {name: 'Calendar', href: '#', icon: CalendarIcon, current: false},
-  {name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false},
-  {name: 'Reports', href: '#', icon: ChartPieIcon, current: false},
+  {name: 'Головна', href: '/', icon: HomeIcon, current: false},
+  {name: 'Панель управління', href: '/dashboard', icon: HomeIcon, current: true},
+  {name: 'Мешканці', href: '/residents', icon: UsersIcon, current: false},
+  {name: 'Комунальні послуги', href: '/utilities', icon: BoltIcon, current: false},
+  {name: 'Заявки на ремонт', href: '/maintenance', icon: WrenchScrewdriverIcon, current: false},
+  {name: 'Налаштування', href: '#', icon: Cog6ToothIcon, current: false},
 ]
 
 const sidebarOpen = ref(false)

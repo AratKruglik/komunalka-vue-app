@@ -1,22 +1,21 @@
 <script setup>
 import FullLogo from "../UI/logo/FullLogo.vue";
 import {
-  CalendarIcon, ChartPieIcon,
+  BoltIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
   HomeIcon,
-  UsersIcon
+  UsersIcon,
+  WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
 import {process} from "std-env";
 
 const navigation = [
-  {name: 'Dashboard', href: '#', icon: HomeIcon, current: true},
-  {name: 'Team', href: '#', icon: UsersIcon, current: false},
-  {name: 'Projects', href: '#', icon: FolderIcon, current: false},
-  {name: 'Calendar', href: '#', icon: CalendarIcon, current: false},
-  {name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false},
-  {name: 'Reports', href: '#', icon: ChartPieIcon, current: false},
+  {name: 'Головна', href: '/', icon: HomeIcon, current: false},
+  {name: 'Панель управління', href: '/dashboard', icon: HomeIcon, current: true},
+  {name: 'Мешканці', href: '/residents', icon: UsersIcon, current: false},
+  {name: 'Комунальні послуги', href: '/utilities', icon: BoltIcon, current: false},
+  {name: 'Заявки на ремонт', href: '/maintenance', icon: WrenchScrewdriverIcon, current: false},
+  {name: 'Налаштування', href: '#', icon: Cog6ToothIcon, current: false},
 ]
 
 const version = 'v1.0.0'
