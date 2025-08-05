@@ -4,6 +4,7 @@ import {
   BoltIcon,
   Cog6ToothIcon,
   HomeIcon,
+  UserIcon,
   UsersIcon,
   WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
@@ -14,6 +15,7 @@ const navigation = [
   {name: 'Мешканці', href: '/residents', icon: UsersIcon, current: false},
   {name: 'Комунальні послуги', href: '/utilities', icon: BoltIcon, current: false},
   {name: 'Заявки на ремонт', href: '/maintenance', icon: WrenchScrewdriverIcon, current: false},
+  {name: 'Особистий кабінет', href: '/personal-cabinet', icon: UserIcon, current: false},
   {name: 'Налаштування', href: '/settings', icon: Cog6ToothIcon, current: false},
 ]
 
