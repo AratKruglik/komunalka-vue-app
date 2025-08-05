@@ -21,7 +21,6 @@ import {
   WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
 import {ref} from "vue";
-import {process} from "std-env";
 import FullLogo from "../UI/logo/FullLogo.vue";
 
 const userNavigation = [
@@ -39,7 +38,6 @@ const navigation = [
 ]
 
 const sidebarOpen = ref(false)
-const version = 'v1.0.0'
 </script>
 
 <template>
@@ -88,12 +86,6 @@ const version = 'v1.0.0'
                         </a>
                       </li>
                     </ul>
-                  </li>
-
-                  <li class="mt-auto">
-                    <p class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 text-gray-700">
-                      Build {{ process.env.VUE_APP_VERSION || version }}
-                    </p>
                   </li>
                 </ul>
               </nav>

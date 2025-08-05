@@ -8,7 +8,6 @@ import {
   UsersIcon,
   WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
-import {process} from "std-env";
 
 const navigation = [
   {name: 'Головна', href: '/', icon: HomeIcon, current: false},
@@ -18,8 +17,6 @@ const navigation = [
   {name: 'Особистий кабінет', href: '/personal-cabinet', icon: UserIcon, current: false},
   {name: 'Налаштування', href: '/settings', icon: Cog6ToothIcon, current: false},
 ]
-
-const version = 'v1.0.0'
 </script>
 
 <template>
@@ -43,12 +40,6 @@ const version = 'v1.0.0'
                 </a>
               </li>
             </ul>
-          </li>
-
-          <li class="mt-auto">
-            <p class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 text-gray-700">
-              Build {{ process.env.VUE_APP_VERSION || version }}
-            </p>
           </li>
         </ul>
       </nav>
