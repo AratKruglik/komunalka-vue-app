@@ -1,5 +1,13 @@
 <script setup>
-import {PencilIcon, TrashIcon, MapPinIcon, BoltIcon, FireIcon, CloudIcon, BeakerIcon} from "@heroicons/vue/24/outline/index.js";
+import {
+  PencilIcon,
+  TrashIcon,
+  MapPinIcon,
+  BoltIcon,
+  FireIcon,
+  CloudIcon,
+  BeakerIcon
+} from "@heroicons/vue/24/outline/index.js";
 
 defineProps({
   id: {
@@ -43,10 +51,16 @@ defineProps({
 
     <!-- Action Buttons -->
     <div class="absolute top-3 right-3 flex items-center space-x-2">
-      <button class="p-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
+      <button :class="[
+          'p-2 rounded-full shadow-sm hover:shadow-md transition-shadow hover:cursor-pointer',
+          isPrimary ? 'bg-yellow-400' : 'bg-white'
+          ]">
         <PencilIcon class="h-4 w-4 text-gray-600"/>
       </button>
-      <button class="p-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow">
+      <button :class="[
+          'p-2 rounded-full shadow-sm hover:shadow-md transition-shadow hover:cursor-pointer',
+          isPrimary ? 'bg-yellow-400' : 'bg-white'
+          ]">
         <TrashIcon class="h-4 w-4 text-gray-600"/>
       </button>
     </div>
@@ -58,7 +72,7 @@ defineProps({
                   Основна адреса
                 </span>
       <button v-else
-              class="inline-flex items-center px-3 py-1 rounded-full text-xs font-normal text-gray-600 bg-white border border-gray-300 hover:bg-gray-50">
+              class="inline-flex items-center px-3 py-1 rounded-full text-xs font-normal text-gray-600 bg-white border border-gray-300 hover:bg-gray-50 hover:cursor-pointer">
         Зробити основною
       </button>
 
