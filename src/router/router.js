@@ -6,6 +6,7 @@ import AddUtilityPage from '../components/pages/AddUtilityPage.vue'
 import AddAddressPage from '../components/pages/AddAddressPage.vue'
 import HomePage from "../components/pages/HomePage/HomePage.vue";
 import PersonalCabinetPage from "../components/pages/PersonalCabinetPage.vue";
+import AddressUtilitiesPage from "../components/pages/AddressUtilitiesPage.vue";
 
 const routes = [
     {path: '/', component: HomePage},
@@ -14,6 +15,7 @@ const routes = [
     {path: '/add-utility', component: AddUtilityPage},
     {path: '/add-address', component: AddAddressPage},
     {path: '/personal-cabinet', component: PersonalCabinetPage},
+    {path: '/address-utilities', component: AddressUtilitiesPage},
 ]
 
 export const router = createRouter({
