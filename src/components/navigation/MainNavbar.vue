@@ -13,32 +13,31 @@ import {
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon, ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  BoltIcon,
+  Cog6ToothIcon,
   HomeIcon,
-  UsersIcon
+  UserIcon,
+  UsersIcon,
+  WrenchScrewdriverIcon
 } from "@heroicons/vue/24/outline/index.js";
 import {ref} from "vue";
-import {process} from "std-env";
 import FullLogo from "../UI/logo/FullLogo.vue";
 
 const userNavigation = [
-  {name: 'Your profile', href: '#'},
-  {name: 'Sign out', href: '#'},
+  {name: 'Ваш профіль', href: '/personal-cabinet'},
+  {name: 'Вийти', href: '/login'},
 ]
 
 const navigation = [
-  {name: 'Dashboard', href: '#', icon: HomeIcon, current: true},
-  {name: 'Team', href: '#', icon: UsersIcon, current: false},
-  {name: 'Projects', href: '#', icon: FolderIcon, current: false},
-  {name: 'Calendar', href: '#', icon: CalendarIcon, current: false},
-  {name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false},
-  {name: 'Reports', href: '#', icon: ChartPieIcon, current: false},
+  {name: 'Головна', href: '/', icon: HomeIcon, current: false},
+  {name: 'Мешканці', href: '/residents', icon: UsersIcon, current: false},
+  {name: 'Комунальні послуги', href: '/utilities', icon: BoltIcon, current: false},
+  {name: 'Заявки на ремонт', href: '/maintenance', icon: WrenchScrewdriverIcon, current: false},
+  {name: 'Особистий кабінет', href: '/personal-cabinet', icon: UserIcon, current: false},
+  {name: 'Налаштування', href: '/settings', icon: Cog6ToothIcon, current: false},
 ]
 
 const sidebarOpen = ref(false)
-const version = 'v1.0.0'
 </script>
 
 <template>
@@ -87,12 +86,6 @@ const version = 'v1.0.0'
                         </a>
                       </li>
                     </ul>
-                  </li>
-
-                  <li class="mt-auto">
-                    <p class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 text-gray-700">
-                      Build {{ process.env.VUE_APP_VERSION || version }}
-                    </p>
                   </li>
                 </ul>
               </nav>
