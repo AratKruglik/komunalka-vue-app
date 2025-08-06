@@ -205,8 +205,8 @@ const deleteMeter = (meterId) => {
 
           <!-- Reading Form -->
           <div class="bg-gray-50 border-b border-gray-200 p-4">
-            <div class="flex items-end space-x-4">
-              <div class="flex-1">
+            <div class="flex items-end gap-4">
+              <div style="width: 753px;">
                 <TextInput
                   v-model="currentReading"
                   label="Поточні показання"
@@ -214,7 +214,7 @@ const deleteMeter = (meterId) => {
                   class="w-full"
                 />
               </div>
-              <div class="w-40">
+              <div style="width: 166px;">
                 <TextInput
                   v-model="readingDate"
                   type="date"
@@ -222,7 +222,7 @@ const deleteMeter = (meterId) => {
                   class="w-full"
                 />
               </div>
-              <div class="pb-2" style="width: 169px;">
+              <div class="mt-7" style="width: 169px;">
                 <PrimaryButton @click="submitReading" class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 h-10 font-medium text-base">
                   Внести показання
                 </PrimaryButton>
