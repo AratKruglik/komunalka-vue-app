@@ -8,14 +8,17 @@ import HomePage from "../components/pages/HomePage/HomePage.vue";
 import PersonalCabinetPage from "../components/pages/PersonalCabinetPage.vue";
 import AddressUtilitiesPage from "../components/pages/AddressUtilitiesPage.vue";
 
-const routes = [
-    {path: '/', component: HomePage},
-    {path: '/login', component: LoginPage},
-    {path: '/register', component: RegisterPage},
-    {path: '/add-utility', component: AddUtilityPage},
-    {path: '/add-address', component: AddAddressPage},
-    {path: '/personal-cabinet', component: PersonalCabinetPage},
-    {path: '/address-utilities', component: AddressUtilitiesPage},
+import AddressUtilityBillsPage from '../components/pages/AddressUtilityBillsPage.vue'
+ 
+ const routes = [
+     {path: '/', component: HomePage},
+     {path: '/login', component: LoginPage},
+     {path: '/register', component: RegisterPage},
+     {path: '/add-utility', component: AddUtilityPage},
+     {path: '/add-address', component: AddAddressPage},
+     {path: '/personal-cabinet', component: PersonalCabinetPage},
+     {path: '/address-utilities', component: AddressUtilitiesPage},
+     {path: '/address-utility-bills', name: 'AddressUtilityBills', component: AddressUtilityBillsPage}
 ]
 
 export const router = createRouter({
