@@ -9,6 +9,7 @@ import PersonalCabinetPage from "../components/pages/PersonalCabinetPage.vue";
 import AddressUtilitiesPage from "../components/pages/AddressUtilitiesPage.vue";
 
 import AddressUtilityBillsPage from '../components/pages/AddressUtilityBillsPage.vue'
+import AIAssistantPage from '../components/pages/AIAssistantPage.vue'
  
  const routes = [
      {path: '/', component: HomePage},
@@ -18,7 +19,8 @@ import AddressUtilityBillsPage from '../components/pages/AddressUtilityBillsPage
      {path: '/add-address', component: AddAddressPage},
      {path: '/personal-cabinet', component: PersonalCabinetPage},
      {path: '/address-utilities', component: AddressUtilitiesPage},
-     {path: '/address-utility-bills', name: 'AddressUtilityBills', component: AddressUtilityBillsPage}
+     {path: '/address-utility-bills', name: 'AddressUtilityBills', component: AddressUtilityBillsPage},
+    {path: '/ai-assistant', name: 'AIAssistant', component: AIAssistantPage}
 ]
 
 export const router = createRouter({
