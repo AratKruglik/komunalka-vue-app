@@ -196,7 +196,8 @@ import {
   FireIcon,
   BeakerIcon,
   WifiIcon,
-  CheckIcon
+  CheckIcon,
+  SunIcon
 } from '@heroicons/vue/24/outline'
 
 export default {
@@ -212,7 +213,8 @@ export default {
     FireIcon,
     BeakerIcon,
     WifiIcon,
-    CheckIcon
+    CheckIcon,
+    SunIcon
   },
   data() {
     return {
@@ -336,7 +338,7 @@ export default {
         electricity: 'BoltIcon',
         gas: 'FireIcon',
         coldWater: 'BeakerIcon',
-        hotWater: 'WifiIcon'
+        hotWater: 'BeakerIcon'
       }
       return icons[type] || 'DocumentTextIcon'
     },
@@ -360,7 +362,6 @@ export default {
 .utility-bills-page {
   width: 100%;
   min-height: 100vh;
-  background: #f8fafc;
   padding: 16px;
   max-width: 1184px;
   margin: 0 auto;

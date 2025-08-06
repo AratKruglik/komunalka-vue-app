@@ -163,7 +163,7 @@ export default {
         electricity: 'BoltIcon',
         gas: 'FireIcon',
         coldWater: 'BeakerIcon',
-        hotWater: 'WifiIcon'
+        hotWater: 'BeakerIcon'
       }
       return icons[type] || 'BoltIcon'
     },
